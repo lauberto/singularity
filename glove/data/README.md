@@ -1,2 +1,2 @@
 # Data folder
-Store here your text data
+Store here your text data.
