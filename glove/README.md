@@ -1,28 +1,8 @@
 # Glove
-This container is used to train a Glove embeddings on a corpus. 
+This container is used to train Glove embeddings on a corpus for the CAT&kittens project. 
 
 ## Requirements
- * Singularity (>=3.9.0) - How to install: [here](https://sylabs.io/guides/3.0/user-guide/installation.html)
-
-## Data and model directory tree
-Data and models should be store in the following way  
-
-```
-.
-└--data
-|   |
-|   └--preprocessed
-|       |
-|       └--full_domains
-|           |
-|           └--lemmas
-|
-└---models
-    |
-    └--glove
-
-```
-
+ * Singularity (>=3.9.0) - [Installation](https://sylabs.io/guides/3.0/user-guide/installation.html)
 
 ## Bind to data
 `singularity exec --bind /path/to/data:/mnt my_container.sif`
