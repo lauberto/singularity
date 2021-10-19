@@ -1,6 +1,2 @@
-# Models folder structure
-```
-models
-|
-└--glove
-```
+# Models folder 
+Store here your Glove models
