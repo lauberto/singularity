@@ -1,2 +1,2 @@
 ## Models folder 
-Store here your Glove models
+Store here your Glove models.
