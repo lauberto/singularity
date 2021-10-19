@@ -1,10 +1,2 @@
-# Data folder structure
-```
-data
-|
-└--preprocessed
-   |
-   └--full_domains
-      |
-      └--lemmas
-```
+## Data folder
+Store here your text data.
