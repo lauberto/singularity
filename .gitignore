@@ -1,11 +1,11 @@
-*.html
-*.pdf
-*.pickle
-*.npy
+*.sif
+*.word2vec
 *.zip
 *.model
 *.swp
 *.ini
 
+__pycache__/
 data
 models
+log
