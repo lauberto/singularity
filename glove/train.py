@@ -1,7 +1,7 @@
 from gensim import utils
 from gensim.scripts.glove2word2vec import glove2word2vec
-from train_utils import SentencesLoader
-from glove_binary import Corpus, Glove
+from utils import SentencesLoader
+from glove import Corpus, Glove
 
 import tempfile
 import logging
