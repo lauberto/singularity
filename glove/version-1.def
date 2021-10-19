@@ -1,1 +1,7 @@
 Bootstrap: docker
+From: alpine:3.14
+
+%post
+    # Download the latest package list (apk does not prompt user)
+    apk update
+    pip install -r requirements.txt
