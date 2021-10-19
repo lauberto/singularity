@@ -7,5 +7,5 @@
 *.swp
 *.ini
 
-# data
-# models
+data
+models
