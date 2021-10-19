@@ -1,1 +1,11 @@
+*.html
+*.pdf
+*.pickle
+*.npy
+*.zip
+*.model
+*.swp
+*.ini
 
+# data
+# models
