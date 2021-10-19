@@ -14,7 +14,6 @@ config = configparser.ConfigParser()
 config.read(path_config_file)
 models_dir = config['PATHS']['models_dir']
 data_dir = config['PATHS']['data_dir']
-lemmas_dir = 'preprocessed/full_domains/lemmas/'
 log_dir = config['PATHS']['log_dir']
 log_file = os.path.join(log_dir, 'training.txt')
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
