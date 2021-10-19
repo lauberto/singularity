@@ -1,6 +1,16 @@
 Bootstrap: docker
 From: alpine:3.14
 
+%setup
+    mkdir ${SINGULARITY_ROOTFS}/data
+    mkdir ${SINGULARITY_ROOTFS}/models
+    mkdir ${SINGULARITY_ROOTFS}/log
+    touch ${SINGULARITY_ROOTFS}/log/training.txt
+
+%files
+    /requirements.txt
+    /config.ini
+
 %post
     # Download the latest package list (apk does not prompt user)
     apk update
