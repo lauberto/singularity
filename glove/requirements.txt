@@ -1,2 +1,2 @@
-glove_python
-gensim
+glove-python-binary==0.2.0
+gensim==4.0.1
