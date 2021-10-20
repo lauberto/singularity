@@ -12,4 +12,4 @@ Refer to [this tutorial](https://github.com/bdusell/singularity-tutorial) for mo
 ## Exec training
 When you exec the train script inside the container you should bind the host directories where you store text data (your corpus), trained models and logs, to the 
 inside-container directories, like so:  
-`singularity exec --bind ./path/to/host/data:/container/data,./path/to/host/models:/models,./path/to/host/log:/container/log version-1.sif python3 train.py`
+`singularity exec --bind ./path/to/host/data:/data,./path/to/host/models:/models,./path/to/host/log:/log version-1.sif python3 train.py`
