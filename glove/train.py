@@ -20,12 +20,12 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 paths = [  
   # Lemmatized w/ treetagger
   os.path.join(data_dir, 'Economics.txt'),
-#   os.path.join(data_dir, 'Education_and_psychology.txt'),
-#   os.path.join(data_dir, 'History.txt'),
-#   os.path.join(data_dir, 'Law.txt'),
-#   os.path.join(data_dir, 'Linguistics.txt'),
-#   os.path.join(data_dir, 'Sociology.txt'),
-#   os.path.join(data_dir, 'supercybercat.txt'),
+  os.path.join(data_dir, 'Education_and_psychology.txt'),
+  os.path.join(data_dir, 'History.txt'),
+  os.path.join(data_dir, 'Law.txt'),
+  os.path.join(data_dir, 'Linguistics.txt'),
+  os.path.join(data_dir, 'Sociology.txt'),
+  os.path.join(data_dir, 'supercybercat.txt'),
 
 ]
 
@@ -34,7 +34,7 @@ EPOCHS = 2
 SIZE = 50 # 200, 300, 500
 
 def main():
-  for epochs in [2, ]:
+  for epochs in [30, 100]:
     for datapath in paths:
       print(f'Started training for: {datapath}', flush=True)
       model_name = os.path.splitext(os.path.basename(datapath))[0] + f'_{epochs}epx.model'
@@ -43,7 +43,7 @@ def main():
       corpus.fit(sentences, window=CONTEXT_WINDOW)
 
       glove = Glove(no_components=SIZE, learning_rate=0.05) 
-      glove.fit(corpus.matrix, epochs=EPOCHS, no_threads=4, verbose=True)
+      glove.fit(corpus.matrix, epochs=EPOCHS, no_threads=40, verbose=True)
       glove.add_dictionary(corpus.dictionary)
       glove.save(os.path.join(models_dir, model_name))
 
