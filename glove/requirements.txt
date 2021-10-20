@@ -1,2 +1,2 @@
 glove-python-binary==0.2.0
-gensim==4.0.1
+gensim==3.6.0
