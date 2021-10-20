@@ -1,4 +1,3 @@
-from gensim.models.callbacks import CallbackAny2Vec
 from gensim import utils
 
 class SentencesLoader:
