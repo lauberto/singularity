@@ -4,15 +4,8 @@ From: ubuntu:18.04
 %help
     This is a container used to train Glove vectors on a given corpus.
 
-%setup
-    mkdir ${SINGULARITY_ROOTFS}/data
-    mkdir ${SINGULARITY_ROOTFS}/models
-    mkdir ${SINGULARITY_ROOTFS}/log
-    touch ${SINGULARITY_ROOTFS}/log/training.txt
-
 %files
     ./requirements.txt /requirements.txt
-    ./config.ini /config.ini
 
 %post
     ## Part of the code taken from: https://github.com/bdusell/singularity-tutorial/blob/master/examples/xor/version-1.def
